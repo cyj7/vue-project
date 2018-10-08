@@ -10,6 +10,10 @@
 			<div>
 				<echarts :option1='data1' :option2="data2" :titles="names" :xName="xName" :yName="yName" :symbolSize="symbolSize"></echarts>
 			</div>
+			<div>
+				<upload></upload>
+			</div>
+			<div><router-link to='/create-new'>创建新用户</router-link></div>
 		</section>
 		<footer-dom></footer-dom>
 	</div>
@@ -17,10 +21,12 @@
 <script>
 	import Header from "@/components/Header"; //头部
 	import Footer from "@/components/Footer"; //底部
-	import Select from "@/components/Select"; //select 选择框
+	// import Select from "@/components/Select"; //select 选择框
+	import MySelect from "@/components/MySelect"; //select 选择框
 	import Page from "@/components/Page";
 	import DatePicker from "@/components/DatePicker";
-	import Echarts from "@/components/Echarts";
+	import Echarts from "@/components/Echarts"; //折线图
+	import Upload from "@/components/Upload"; //上传
 	export default {
 		name: "Index",
 		data(){
@@ -57,11 +63,12 @@
 		},
 		components: {
 			"header-dom": Header,
-			"select-dom": Select,
+			"select-dom": MySelect,
 			'footer-dom': Footer,
 			'page': Page,
 			'date-picker': DatePicker,
-			'echarts': Echarts
+			'echarts': Echarts,
+			'upload': Upload
 		},
 		methods: {
 			// toUrl: function(url){

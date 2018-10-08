@@ -242,8 +242,10 @@ li {
 }
 body {
   font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "Hiragino Sans GB", SimSun, sans-serif;
-  background: #f9f9f9;
   color: #333;
+}
+html,body {
+  background: #f0eeef;
 }
 a {
   text-decoration: none;
@@ -256,6 +258,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
     background: none;
     text-decoration: none;
 }
+i{ font-style: normal; }
 
 @media (max-width: 1400px){
   body{ font-size: 12px; }
@@ -272,9 +275,13 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
 .clearfix {
   zoom: 1;
 }
-/*字体颜色*/
+/*颜色*/
 $mainColor: #f39800;
 $blueColor: #6ea3ee;
+$redColor: #f56c6c;
+$yellowColor: #e6a23c;
+$greenColor: #67c23a;
+$borderColor: #eaeaea;
 
 // 按钮
 button{
@@ -290,3 +297,12 @@ button{
 	padding: 0 20px;
 }
 
+.wrap{
+  margin: 0 10px;
+  min-width: 1280px;
+  background: #fff;
+}
+
+.v-middle{
+  vertical-align: middle;
+}
