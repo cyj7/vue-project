@@ -14,6 +14,7 @@
 				<upload></upload>
 			</div>
 			<div><router-link to='/create-new'>创建新用户</router-link></div>
+			<div><router-link to='/list'>列表页</router-link></div>
 		</section>
 		<footer-dom></footer-dom>
 	</div>

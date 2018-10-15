@@ -260,6 +260,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
 }
 i{ font-style: normal; }
 
+
 @media (max-width: 1400px){
   body{ font-size: 12px; }
 }
@@ -282,6 +283,11 @@ $redColor: #f56c6c;
 $yellowColor: #e6a23c;
 $greenColor: #67c23a;
 $borderColor: #eaeaea;
+
+//table
+table, tr, td{ border: 1px solid $borderColor; }
+
+
 
 // 按钮
 button{
