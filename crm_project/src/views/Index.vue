@@ -16,12 +16,10 @@
 			<div><router-link to='/create-new'>创建新用户</router-link></div>
 			<div><router-link to='/list'>列表页</router-link></div>
 		</section>
-		<footer-dom></footer-dom>
 	</div>
 </template>
 <script>
 	import Header from "@/components/Header"; //头部
-	import Footer from "@/components/Footer"; //底部
 	// import Select from "@/components/Select"; //select 选择框
 	import MySelect from "@/components/MySelect"; //select 选择框
 	import Page from "@/components/Page";
@@ -65,7 +63,6 @@
 		components: {
 			"header-dom": Header,
 			"select-dom": MySelect,
-			'footer-dom': Footer,
 			'page': Page,
 			'date-picker': DatePicker,
 			'echarts': Echarts,
