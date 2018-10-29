@@ -246,6 +246,8 @@ body {
 }
 html,body {
   background: #f0eeef;
+  width: 100%;
+  height: 100%;
 }
 a {
   text-decoration: none;
@@ -283,13 +285,22 @@ $redColor: #f56c6c;
 $yellowColor: #e6a23c;
 $greenColor: #67c23a;
 $borderColor: #eaeaea;
+$lftNavBackground: #444;
+$maxNavHoverBackground: #333;
+$hoverLightBackground: #555;
+$greyFontColor: #999;
+
+//导航高度
+$headerHeight: 65px;
+$navWidth: 260px; //左侧菜单打开后的宽度
+$navHeight: 45px; //左侧每个菜单的高度
+$navMinWidth: 40px; //左侧菜单缩小后的宽度
 
 //table
 table, tr, td{ border: 1px solid $borderColor; }
 
 
-
-// 按钮
+//表单 
 button{
 	background: none;
 	border: 0;
@@ -302,11 +313,43 @@ button{
 	line-height: 30px;
 	padding: 0 20px;
 }
+.main-btn{
+  @extend .btn;
+  background: $mainColor;
+  border-color: $mainColor;
+  color: #fff;
+}
+.cancel{
+  padding: 5px 10px;
+  background: #ccc;
+}
+.confirm{
+  padding: 5px 10px;
+  background: $mainColor;
+  color: #fff;
+}
+.inp{
+  border: 1px solid #cfcfcf;
+  padding: 5px;
+  width: 280px;
+}
+//红*
+.red-star{
+  color: $redColor;
+}
 
+#app{
+  height: 100%;
+  position: relative;
+}
 .wrap{
-  margin: 0 10px;
   min-width: 1280px;
   background: #fff;
+  position: relative;
+  height: 100%;
+}
+.right-wrap{ //右侧模块
+  margin-left: $navWidth;
 }
 
 .v-middle{
@@ -319,6 +362,34 @@ button{
   float: right;
 }
 
+//三角 图标
+.icon-right-arr{
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  &:before, &:after{
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 6px dashed transparent;
+    position: absolute;
+    top: 4px;
+  }
+  &:before{
+    border-left: 6px solid #efefef;
+    left: 10px;
+  }
+  &:after{
+    border-left: 6px solid #444;
+    left: 9px;
+  }
+}
 
+//上下左右距离
+.main-m{
+  margin: 20px;
+}
 
 

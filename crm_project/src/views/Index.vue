@@ -1,12 +1,13 @@
 <template>
-	<div>
+	<div class="">
 		<header-dom></header-dom>
-		<section>
+		<tree></tree>
+		<section class="">
 			<div>sdfadf</div>
-			<select-dom></select-dom>
+			<select-dom :data="selectDdata"></select-dom>
 			<!-- <div @click="toUrl(1)">分页</div> -->
 			<router-link to='/page/1'>分页</router-link>
-			<date-picker></date-picker>
+			<!-- <date-picker></date-picker> -->
 			<div>
 				<echarts :option1='data1' :option2="data2" :titles="names" :xName="xName" :yName="yName" :symbolSize="symbolSize"></echarts>
 			</div>
@@ -20,6 +21,7 @@
 </template>
 <script>
 	import Header from "@/components/Header"; //头部
+	import NavTree from "@/components/NavTree"; //左侧菜单
 	// import Select from "@/components/Select"; //select 选择框
 	import MySelect from "@/components/MySelect"; //select 选择框
 	import Page from "@/components/Page";
@@ -57,11 +59,13 @@
 				names: ["曲线1","曲线2"],
 				xName: "宽度（mm)",
 				yName: "高度（mm)",
-				symbolSize: 5
+				symbolSize: 5,
+				selectDdata: [{"id": 0, "value": "全部选择"},{"id": 1, "value": "选择1"},{"id": 2, "value": "选择2"},{"id": 3, "value": "选择3333333"}]
 			}
 		},
 		components: {
 			"header-dom": Header,
+			'tree': NavTree,
 			"select-dom": MySelect,
 			'page': Page,
 			'date-picker': DatePicker,

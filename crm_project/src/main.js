@@ -6,9 +6,10 @@ import router from './router'
 import axios from 'axios'
 // import ElementUI from 'element-ui';
 // import { DatePicker, Select, Option } from 'element-ui'
-import { DatePicker, Upload } from 'element-ui'
+import { Upload, Tree } from 'element-ui'
 // import 'element-ui/lib/theme-chalk/dropdown.css'
 // import '../static/css/reset.css'
+import '@/style/font/iconfont.css'
 
 
 Vue.config.productionTip = false;
@@ -16,8 +17,8 @@ Vue.prototype.$axios = axios; //api请求
 
 // Vue.use(ElementUI);
 
-//日期控件
-Vue.use(DatePicker);
+//菜单控件
+Vue.use(Tree);
 
 //上传
 Vue.use(Upload);
